@@ -3,18 +3,19 @@ import webbrowser
 import http.server
 
 # Répertoire contenant le fichier HTML
-directory = '/home/lambo-ubuntu/WEB_PROJECT'
+#directory = '/home/lambo-ubuntu/WEB_PROJECT'
+directory = '/home/lambo-ubuntu/WEB_PROJECT/CREATE_FORM/'
 
 # Port sur lequel le serveur web écoutera
-port = 2000
+port = 2004
 
 os.chdir(directory)
 
 # Lance un serveur web local
 httpd = http.server.HTTPServer(('0.0.0.0', port), http.server.SimpleHTTPRequestHandler)
 
-# Ouvrir le navigateur par défaut pour afficher la page
-webbrowser.open(f'http://localhost:{port}/page.html')
+# Ouvrir le navigateur par défaut pour afficher une page spécifique
+webbrowser.open(f'http://localhost:{port}/form_create_task.html')
 
 # Lance le serveur
 httpd.serve_forever()

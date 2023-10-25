@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<head>
+  <title> Création de taches</title>
+  <link rel="stylesheet" type="text/css" href="form_create_task.css">
+</head>
+
+
+<body>
+  <center>
+    <p class="titre"> FORMULAIRE DE CREATION DES TACHES QUOTIDIENNES</p>
+    <form><!-- action="/ma-page-de-traitement" method="post"> -->
+      <ul>
+        <p class="marge">
+          <label for="id">ID&nbsp;</label> <!--Doit etre en autoincrément-->
+          <input type="text" id="id_task" name="task_number" />
+        </p>
+
+        <p class="marge">
+          <label for="title">Titre &nbsp;</label>
+          <input type="text" id="title" name="task_title" />
+        </p>
+
+        <p class="marge">
+          <label for="description">Description de la tache&nbsp;</label>
+          <textarea id="libellé" name="task_details"></textarea> 
+        </p>
+
+        <p class="marge">
+          <label for="dueDate">Date de fin &nbsp;</label>
+          <input type="date" id="date" name="task_dueDate" />
+        </p>
+
+      </ul>
+    </form>
+  </center>
+
+</body>
+
+</html>
+<!-- 
+  - gérer l'encodage
+  - 
+-->
