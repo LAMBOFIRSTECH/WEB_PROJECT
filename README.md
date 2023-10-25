@@ -1,7 +1,6 @@
 # WEB_PROJECT
 ## Comment lancer la page web ?
-- On crée dans powershell, un fichier launch.ps1
+python3 start_page.py > /dev/null 2>&1 &
+- > /dev/null 2&>1 permet de rediriger les logs.
   
-- Dans le script python depuis WSL, on lancer le script launch.ps1
-
-  Pourquoi de cette manière ? : xdg-open n'arrive pas à lancer le fichier correctement
+  > & : permet de ne pas interrompre le prompte.
