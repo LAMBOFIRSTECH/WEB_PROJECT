@@ -7,7 +7,7 @@ import http.server
 directory = '/home/lambo-ubuntu/WEB_PROJECT/CREATE_FORM/'
 
 # Port sur lequel le serveur web écoutera
-port = 2004
+port = 3600
 
 os.chdir(directory)
 
@@ -19,4 +19,8 @@ webbrowser.open(f'http://localhost:{port}/form_create_task.html')
 
 # Lance le serveur
 httpd.serve_forever()
-
+# Taches prochaines
+"""
+ - Dispatcher les pages html
+ - Gérer le problème de port et les pages qui ne s'affichent pas
+"""

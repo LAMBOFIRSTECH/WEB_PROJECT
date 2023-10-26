@@ -1,38 +1,39 @@
 form {
   /* On centre le formulaire */
   margin: 0 auto;
-  width: 400px; 
+  width: 400px;
   /* Le contour du formulaire */
   padding: 1em;
   border: 1px solid #ccc;
   border-radius: 1em;
 
 
- 
+
   height: auto;
- 
+
   position: absolute;
- 
+
   left: 50%;
- 
+
   top: 50%;
- 
+
   transform: translate(-50%, -50%);
- 
+
   -webkit-transform: translate(-50%, -50%);
 }
+
 .titre {
 
   height: auto;
- 
+
   position: absolute;
- 
+
   left: 50%;
- 
-  top: 29%;
- 
+
+  top: 20%;
+
   transform: translate(-50%, -50%);
- 
+
   -webkit-transform: translate(-50%, -50%);
 
 }
@@ -91,6 +92,8 @@ textarea {
 .button {
   /* On aligne les boutons avec les champs texte. */
   padding-left: 90px;
+  width: 300px;
+  writing-mode: horizontal-tb;
   /* La même taille que les libellés */
 }
 
@@ -101,6 +104,13 @@ button {
 }
 
 .marge {
-  /*  Permet de gérer l'écartement entre deux labels*/
-  margin-bottom: 20px; 
+  /*  Permet de gérer l'écartement entre deux labels */
+  margin-bottom: 20px;
+}
+
+.send {
+  /*  Pour les boutons d'envoi et annulation d'un formulaire */
+
+  width: 200px;
+  writing-mode: horizontal-tb;
 }
