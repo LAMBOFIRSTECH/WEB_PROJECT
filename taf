@@ -1,5 +1,12 @@
-NEXT : - rajouter une date de debut de taches dans le formulaire.
-       - rajouter une liste déroulante assigner à -> pour une tache.
+NEXT : 
+       
        - rendre le champ ID grisé et en autoincrément.
        - création d'un tableau contenant les taches et zone de recherche par titre ou par personne en charge de la tache.
+       - création de la fonction get_users() dans js.
+       - création du formulaire des utilisateurs 
+              * les valeurs dans les champs sont récupérées puis chargées dans une liste dans le script javascript 
+              * de javascript on envoie les valeurs dans ^python 
+              * de python on génère un fichier txt avec la liste des utilisateurs crée
+              * plustard cette liste sera stockée dans une base de données
+       - verifier que l'hors de la creation d'un user on a bien dans le liste des utilisateurs
 

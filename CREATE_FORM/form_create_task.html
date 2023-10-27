@@ -2,14 +2,14 @@
 
 <head>
   <title> Création de taches</title>
-  <link rel="stylesheet" type="text/css" href="form_create_task.css">
+  <link rel="stylesheet" type="text/css" href="common_form.css">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 
 <body>
-  <script src="form_create_task.js"></script>
+  <script src="common_form.js"></script>
   <center>
-    <p class="titre"> <b>FORMULAIRE DE CRÉATION DES TACHES QUOTIDIENNES</b></p>
+    <p class="titre1"> <b>FORMULAIRE DE CRÉATION DES TACHES QUOTIDIENNES</b></p>
     <form id="formulaire" onsubmit="return envoyer_formulaire();"> <!-- action="/ma-page-de-traitement" method="post"> -->
       <ul>
         <p class="marge">
@@ -28,16 +28,9 @@
         </p>
 
         <p class="merge">
-          <label for="users">A assigner à</label>
+          <label for="users">Assigné à</label>
           <input type="text" multiple name="user_task" id="user" list="user_list" size="64" />
-          <datalist id="user_list">
-            <option value="toto">toto</option>
-            <option value="titi">titi</option>
-            <option value="tutu">tutu</option>
-            <option value="tete">tete</option>
-            <option value="tata">tata</option>
-            <option value="tyty">tyty</option>
-          </datalist>
+          <datalist id="user_list"></datalist> 
         </p>
 
         <p class="marge">
@@ -66,6 +59,5 @@
 
 </html>
 <!-- 
-  - Variabiliser les utilisateurs dans le liste deroulante
-  - Ne pas valider le formulaire si la date de debut est sup à la date de fin
+  - 
 -->
