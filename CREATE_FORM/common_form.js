@@ -5,7 +5,7 @@ function succes_form() {
     setTimeout(function () {
         messageElement.textContent = "";
 
-    }, 10000);
+    }, 3000);
 }
 
 function envoyer_formulaire() {
@@ -36,7 +36,8 @@ function envoyer_formulaire() {
     return false;
 
 }
-var users = []
+var users = [];
+
 function get_users() {
     var matricule = document.getElementById('id_user').value;
     var nom = document.getElementById('nom').value;
@@ -44,22 +45,32 @@ function get_users() {
     if (matricule === "" || nom === "") {
         alert("Veuillez remplir tous les champs du formulaire.");
     } else {
-        users.push(nom)
-        nom = "";
-        succes_form()
+        users.push(nom);
+        // Réinitialisez les champs du formulaire
+        document.getElementById('id_user').value = "";
+        document.getElementById('nom').value = "";
+        update_user_list();
     }
+    return false;
+}
 
+function update_user_list() {
+    var user_list = document.getElementById('user_list');
+    user_list.innerHTML = ""; // Effacez la liste précédente
+    for (var i = 0; i < users.length; i++) {
+        var option = document.createElement('option');
+        option.value = users[i];
+        user_list.appendChild(option);
+    }
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    var user_list = document.getElementById('user_list');
-    var a = ["popo", "titi", "tutu", "tata", "tete", "tyty"];
-    a.forEach(function (item) {
-        var option = document.createElement('option');
-        option.value = item;
-        user_list.appendChild(option);
-    });
+    update_user_list(); // Affichez la liste des utilisateurs au chargement de la page
 });
+
+
+
+
 /* 
 - Ces utilisateurs doivent etre récupérer depuis un script python (plustard)
 */

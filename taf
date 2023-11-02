@@ -9,4 +9,7 @@ NEXT :
               * de python on génère un fichier txt avec la liste des utilisateurs crée
               * plustard cette liste sera stockée dans une base de données
        - verifier que l'hors de la creation d'un user on a bien dans le liste des utilisateurs
+       - rendre les pages responsives
+       - on ne devrait pas pouvoir envoyer le formulaire ayant le meme ID
+       - la barre d'url et les champs remplis ne sont pas synchrones
 

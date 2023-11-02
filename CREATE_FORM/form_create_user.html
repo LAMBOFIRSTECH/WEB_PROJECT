@@ -10,7 +10,7 @@
   <script src="common_form.js"></script>
   <center>
     <p class="titre2"> <b>FORMULAIRE DE CRÉATION DES UTILISATEURS</b></p>
-    <form id="formulaire">
+    <form id="formulaire" onsubmit="return get_users(); ">
       <ul>
         <p class="marge">
           <label for="id">Matricule&nbsp;</label>
@@ -23,7 +23,7 @@
         </p>
 
         <p class="button">
-          <button id="ajouter" onclick="get_users();">Ajouter à la liste</button>
+          <input type="submit"></button>
         </p>
 
         <p id="message" class="message"></p>
