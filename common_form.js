@@ -47,8 +47,8 @@ function get_users() {
     } else {
         users.push(nom);
         // Réinitialisez les champs du formulaire
-        // document.getElementById('id_user').value = "";
-        // document.getElementById('nom').value = "";
+        document.getElementById('id_user').value = "";
+        document.getElementById('nom').value = "";
         update_user_list();
     }
     return false;

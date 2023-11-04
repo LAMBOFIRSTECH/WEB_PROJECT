@@ -8,7 +8,7 @@ import subprocess
 directory = '/home/lambo-ubuntu/WEB_PROJECT/'
 
 # Port sur lequel le serveur web écoutera
-port = 8888
+port = 8889
 os.chdir(directory)
 
 # Lance un serveur web local
@@ -24,8 +24,6 @@ subprocess.Popen(['xdg-open', url])  # Pour Linux
 httpd.serve_forever()
 # Taches prochaines
 """
- - Dispatcher les pages html
- - Gérer le problème de port et les pages qui ne s'affichent pas
  - Pour identifier sur quel processus tourne l'app :  lsof -i :8888
  - kill -9 <pid> 
 """
