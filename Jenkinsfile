@@ -21,6 +21,7 @@ pipeline {
             steps {
                 // Étape pour exécuter les tests (remplacez cette section par votre propre logique de test)
                 sh 'mkdir FRUITS'
+                sh 'cd FRUITS'
             }
         }
 
