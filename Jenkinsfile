@@ -5,6 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Étape pour récupérer le code depuis le référentiel Git
+                // A voir tout ça 
                 checkout scm
             }
         }
