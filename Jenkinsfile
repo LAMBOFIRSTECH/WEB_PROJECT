@@ -47,3 +47,4 @@ pipeline {
             // Ajoutez ici des actions supplémentaires à effectuer en cas d'échec
         }
     }
+}
