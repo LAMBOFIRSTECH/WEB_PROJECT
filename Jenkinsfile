@@ -12,21 +12,21 @@ pipeline {
         stage('Build') {
             steps {
                 // Étape pour compiler le code (remplacez cette section par votre propre logique de build)
-                sh 'mvn clean install'
+                sh 'ls /var/lib/jenkins/'
             }
         }
 
         stage('Test') {
             steps {
                 // Étape pour exécuter les tests (remplacez cette section par votre propre logique de test)
-                sh 'mvn test'
+                sh 'mkdir FRUITS'
             }
         }
 
         stage('Deploy') {
             steps {
                 // Étape pour déployer l'application (remplacez cette section par votre propre logique de déploiement)
-                sh 'mvn deploy'
+                sh 'touch BANANE'
             }
         }
     }
@@ -45,4 +45,3 @@ pipeline {
             // Ajoutez ici des actions supplémentaires à effectuer en cas d'échec
         }
     }
-}
