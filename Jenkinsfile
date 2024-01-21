@@ -37,6 +37,7 @@ pipeline {
         // Actions à effectuer après l'exécution du pipeline
         success {
             echo 'Le pipeline s\'est exécuté avec succès!'
+            sh 'rm -f Jenkinsfile'
 
             // Ajoutez ici des actions supplémentaires à effectuer en cas de succès
         }
