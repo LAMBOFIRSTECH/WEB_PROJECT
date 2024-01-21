@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Étape pour récupérer le code depuis le référentiel Git
-                // A voir tout ça 
+                // A voir !! 
                 checkout scm
             }
         }
@@ -20,14 +20,15 @@ pipeline {
         stage('Test') {
             steps {
                 // Étape pour exécuter les tests (remplacez cette section par votre propre logique de test)
-                sh 'mkdir FRUITS'
+                echo "C'est l'étape de test ici"
             }
         }
 
         stage('Deploy') {
             steps {
                 // Étape pour déployer l'application (remplacez cette section par votre propre logique de déploiement)
-                sh 'touch BANANE'
+                echo "C'est l'étape de déploiement ici"
+                sh 'rm -f README.md  logback.log taf.md'
             }
         }
     }
