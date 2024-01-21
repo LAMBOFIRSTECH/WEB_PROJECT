@@ -28,7 +28,7 @@ pipeline {
             steps {
                 // Étape pour déployer l'application (remplacez cette section par votre propre logique de déploiement)
                 echo "C'est l'étape de déploiement ici"
-                sh 'rm -f README.md  logback.log taf.md'
+              
             }
         }
     }
