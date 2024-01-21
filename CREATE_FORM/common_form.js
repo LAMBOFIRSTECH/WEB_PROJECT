@@ -1,11 +1,12 @@
 function succes_form() {
+
     // Si tous les champs sont correctement remplis, retardez l'appel à envoyer_formulaire()
     var messageElement = document.getElementById('message');
     messageElement.textContent = "Formulaire envoyé avec succès !!";
     setTimeout(function () {
         messageElement.textContent = "";
 
-    }, 3000);
+    }, 7000);
 }
 
 function envoyer_formulaire() {
@@ -46,31 +47,29 @@ function get_users() {
         alert("Veuillez remplir tous les champs du formulaire.");
     } else {
         users.push(nom);
-        // Réinitialisez les champs du formulaire
-        // document.getElementById('id_user').value = "";
-        // document.getElementById('nom').value = "";
-        update_user_list();
+        // succes_form();
+        matricule = '';
+        nom = '';
     }
-    return false;
+    return true;
 }
 
 function update_user_list() {
     var user_list = document.getElementById('user_list');
-    user_list.innerHTML = ""; // Effacez la liste précédente
-    for (var i = 0; i < users.length; i++) {
-        var option = document.createElement('option');
-        option.value = users[i];
-        user_list.appendChild(option);
+    if (get_users() == true) {
+        for (var i = 0; i < users.length; i++) {
+            var option = document.createElement('option');
+            option.value = users[i];
+            user_list.appendChild(option);
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            user_list; // Affichez la liste des utilisateurs au chargement de la page
+        });
     }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    update_user_list(); // Affichez la liste des utilisateurs au chargement de la page
-});
-
-
-
 
 /* 
-- Ces utilisateurs doivent etre récupérer depuis un script python (plustard)
+- Ces utilisateurs doivent etre récupérer depuis un script python (plustard)$
+- Les champs de textes ne sont tjrs pas supprimés après l'envoi d  u formulaire.
 */
