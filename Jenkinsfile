@@ -5,7 +5,6 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Étape pour récupérer le code depuis le référentiel Git
-                // A voir !! 
                 checkout scm
             }
         }
@@ -28,7 +27,6 @@ pipeline {
             steps {
                 // Étape pour déployer l'application (remplacez cette section par votre propre logique de déploiement)
                 echo "C'est l'étape de déploiement ici"
-              
             }
         }
     }
