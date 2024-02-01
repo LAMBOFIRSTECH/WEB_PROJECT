@@ -130,3 +130,24 @@ button {
   width: 200px;
   writing-mode: horizontal-tb;
 }
+button,
+textarea {
+  /* On s'assure que les champs texte ont la même police
+     Par défaut, les zones de texte ont une police à chasse
+     fixe. */
+  font: 1em sans-serif;
+
+  /* Taille uniforme pour des champs */
+  width: 200px;
+  box-sizing: border-box;
+
+  /* On utilise la même bordure que pour le formulaire */
+  border: 1px solid #999;
+}
+
+button:focus,
+textarea:focus {
+  /* On rajoute une mise en avant pour les éléments avec
+     le focus. */
+  border-color: #000;
+}

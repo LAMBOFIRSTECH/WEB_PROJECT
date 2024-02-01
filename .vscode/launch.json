@@ -5,7 +5,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Edge against localhost",
-            "url": "http://localhost:8892/CREATE_FORM/form_create_user.html",       
+            "url": "http://localhost:8892/start.html",       
             "webRoot": "${workspaceFolder}"
         }
     ]

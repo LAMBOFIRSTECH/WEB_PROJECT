@@ -6,10 +6,10 @@ NEXT :
        - création du formulaire des utilisateurs 
               * les valeurs dans les champs sont récupérées puis chargées dans une liste dans le script javascript 
               * de javascript on envoie les valeurs dans ^python 
-              * de python on génère un fichier txt avec la liste des utilisateurs crée
               * plustard cette liste sera stockée dans une base de données
        - verifier que l'hors de la creation d'un user on a bien dans le liste des utilisateurs
        - rendre les pages responsives
        - on ne devrait pas pouvoir envoyer le formulaire ayant le meme ID
        - la barre d'url et les champs remplis ne sont pas synchrones
 
+https://learn.microsoft.com/fr-fr/aspnet/web-api/overview/testing-and-debugging/

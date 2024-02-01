@@ -1,10 +1,10 @@
 Ce projet consiste à déployer une application web sécurisée à l'aide d'une pile technologique comprenant Python, JavaScript, Linux, TCP/IP, Nginx, Redis, MySQL, Ansible, Docker Swarm, Docker, LXC, Jenkins, et GitHub Actions. L'objectif est de créer une application web évolutive, hautement disponible et sécurisée, en utilisant les dernières pratiques de développement et de gestion de l'infrastructure.
 
-Composants et tâches clés du projet :
+Composants et tâches clées du projet :
 
 1- Développement de l'application web :
 
-    a) Utilisation de Python et JavaScript pour créer une application web robuste.
+    a) Utilisation de HTML et JavaScript pour créer une application web robuste.
     b) Mise en place de fonctionnalités de sécurité pour protéger l'application contre les vulnérabilités courantes.
 
 2- Gestion du serveur Linux :
