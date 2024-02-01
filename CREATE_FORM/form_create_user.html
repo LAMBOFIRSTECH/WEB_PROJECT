@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<head>
+  <title> Utilisateurs</title>
+  <link rel="stylesheet" type="text/css" href="common_form.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+  <script src="common_form.js"></script>
+  <center>
+    <p class="titre2"> <b>FORMULAIRE DE CRÉATION DES UTILISATEURS</b></p>
+    <form id="formulaire" onsubmit="return get_users(); ">
+      <ul>
+        <p class="marge">
+          <label for="id">Matricule&nbsp;</label>
+          <input type="text" id="id_user" name="user" />
+        </p>
+
+        <p class="marge">
+          <label for="title">Nom &nbsp;</label>
+          <input type="text" id="nom" name="user_name" />
+        </p>
+
+        <p class="button">
+          <input type="submit"></button>
+        </p>
+
+        <p id="message" class="message"></p>
+      </ul>
+    </form>
+  </center>
+
+</body>
+
+</html>
+<!-- 
+  - 
+-->
