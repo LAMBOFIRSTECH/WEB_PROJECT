@@ -1,5 +1,5 @@
 // Inclure le contenu de auth.js
-const script2 = require('./auth.js');
+const auth = require('./auth.mjs');
 
 function authentification() {
     var login = document.getElementById('login').value;
