@@ -35,7 +35,7 @@ pipeline {
         // Actions à effectuer après l'exécution du pipeline
         success {
             echo 'Le pipeline s\'est exécuté avec succès!'
-            sh 'rm -f Jenkinsfile'
+            sh 'rm -f Jenkinsfile mylog.log wook.txt taf*  '
 
             // Ajoutez ici des actions supplémentaires à effectuer en cas de succès
         }
