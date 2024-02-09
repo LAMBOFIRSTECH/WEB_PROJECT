@@ -7,16 +7,16 @@
 Il existe des fichiers de configurations de base sur bind9 
 ![](bind_config.png)
 
-1 - On va rajouter dans le fichier name.conf.local le chemin de deux fichiers une zone directe et une zone inverse.
++ On va rajouter dans le fichier name.conf.local le chemin de deux fichiers une zone directe et une zone inverse.
 
-    ![]( named.conf.local.png)
+![](named.conf.local.png)
    
-2 - zone directe
++ zone directe
     C'est dans ce fichier qu'on va définir les types d'enregistrements que l'on souhaite pour DN afin de le resoudre à l'ip du serveur.
     
      ![](db.direct.png)
 
-3 - zone inverse 
++ zone inverse 
      ![](db.inverse.png)
      
 `systemctl restart bind9`
