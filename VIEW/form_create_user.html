@@ -22,6 +22,19 @@
           <input type="text" id="nom" name="user_name" />
         </p>
 
+        <p class="marge">
+          <label for="title">Password &nbsp;</label>
+          <input type="password" id="pass" name="user_pass" required/>
+        </p>
+        <p class="merge">
+          <label for="auth">Role</label>
+          <input type="text" multiple name="role" id="role_utilisateur" list="rules" size="64" />
+          <datalist id="rules">
+              <option value="ADMINISTRATEUR"></option>
+              <option value="UTILISATEUR"></option>
+          </datalist>
+      </p>
+
         <p class="button">
           <input type="submit"></button>
         </p>

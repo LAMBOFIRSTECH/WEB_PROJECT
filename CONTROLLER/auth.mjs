@@ -64,7 +64,7 @@ async function getTasks() {
     }
 
 }
-async function getUsers() {
+export async function getUsers() {
     var urls=getAllEndpoint()
     try {
         const res = await fetch(urls[2])
@@ -72,7 +72,7 @@ async function getUsers() {
             throw new Error(`HTTP error! Status: ${res.status}`);
         }
         var data = await res.json()
-        console.log(data)
+        return data
 
     } catch
     (error) {
@@ -81,9 +81,3 @@ async function getUsers() {
     }
 
 }
-function main() {
-   //getTasks()
-   getUsers()
-
-}
-main()

@@ -1,5 +1,18 @@
-// Inclure le contenu de auth.js
-const auth = require('./auth.mjs');
+import { getUsers } from './auth.mjs';
+
+var users = []
+var userss = []
+var user_admin = ""
+userss = await getUsers()
+
+console.log(userss)
+var find = false
+var users = [
+    { id: 1, nom: 'admin', pass: "admin", privilege: "ADMINISTRATEUR" },
+    { id: 2, nom: 'artur', pass: "artur", privilege: "UTILISATEUR" }
+];
+
+
 
 function authentification() {
     var login = document.getElementById('login').value;
@@ -10,8 +23,16 @@ function authentification() {
     if (login === "" || password === "") {
         return false;
     }
-    if (login === "admin" && password === "admin") {
-        if (role === "ADMINISTRATEUR") {
+    for (var i = 0; i < users.length; i++) {
+        if (users[i].nom === login && users[i].pass === password) {
+            user_admin = users[i];
+            find = true;
+            break;
+        }
+    }
+
+    if (find) {
+        if (role === user_admin.privilege && user_admin.privilege === "ADMINISTRATEUR") {
             // Mettre en place un temps de chargement de page avec une librairie
             messageElement.textContent = "AUTHENTIFICATION ACCEPTEE :)";
             setTimeout(function () {
@@ -19,7 +40,7 @@ function authentification() {
                 window.location.href = '../Menu.html';
             }, 10000);
             return true;
-        } else if (role === "UTILISATEUR") {
+        } else if (role === user_admin.privilege && user_admin.privilege === "UTILISATEUR") {
             // On affiche une page contenant la liste des taches pour cette utilisateur
             alert('bien')
             return true;
@@ -30,6 +51,7 @@ function authentification() {
             }, 10000);
             return false;
         }
+
     } else {
         messageElement.textContent = "Identifiant ou mot de passe incorrect !!";
         setTimeout(function () {
@@ -39,8 +61,9 @@ function authentification() {
     }
     role = '';
 }
-document.addEventListener('DOMContentLoaded', function () {
-    // Appeler authentification() lorsque le document est complètement chargé
-    authentification();
-});
+
+// document.addEventListener('DOMContentLoaded', function () {
+//     // Appeler authentification() lorsque le document est complètement chargé
+//     authentification();
+// });
 
