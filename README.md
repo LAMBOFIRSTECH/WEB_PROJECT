@@ -17,3 +17,4 @@
     3 - zone inverse 
          ![](db.inverse.png)
 -> systemctl restart bind9
+![](task_manager_api.png)
