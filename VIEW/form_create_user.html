@@ -13,7 +13,7 @@
     <form id="formulaire" onsubmit="return get_users(); ">
       <ul>
         <p class="marge">
-          <label for="id">Matricule&nbsp;</label>
+          <label for="id">ID &nbsp;</label>
           <input type="text" id="id_user" name="user" />
         </p>
 
@@ -28,11 +28,15 @@
         </p>
         <p class="merge">
           <label for="auth">Role</label>
-          <input type="text" multiple name="role" id="role_utilisateur" list="rules" size="64" />
+          <input type="text" multiple name="role" id="role_utilisateur" list="rules" size="64"  required/>
           <datalist id="rules">
               <option value="ADMINISTRATEUR"></option>
               <option value="UTILISATEUR"></option>
           </datalist>
+      </p>
+      <p class="marge">
+        <label for="title">Email &nbsp;</label>
+        <input type="email" id="pass" name="user_email" required/>
       </p>
 
         <p class="button">

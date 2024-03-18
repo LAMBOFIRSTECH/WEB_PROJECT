@@ -24,7 +24,7 @@ const userEndpoints = {
 };
 
 const accessToken={
-    getAccessToken: (email) => `/api/v1.0/AccessToken/Login/?email=${email}` 
+    getAccessToken: (email) => `/api/v1.0/AccessToken/Login/?email=${encodeURIComponent(email)}` 
 
 };
 

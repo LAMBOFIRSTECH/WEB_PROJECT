@@ -1,27 +1,12 @@
 // import { get,post } from 'http';
-// import config, { accessToken } from '../config.mjs';
+import config, { accessToken } from '../config.mjs';
 import fetch from 'node-fetch'
 
-// var email="toto@gmail.com"
-// var base_url=config.baseUrl + accessToken.getAccessToken(email)
-// console.log(base_url)
-// try {
-//     const res = await post(base_url)
-//     if (!res.ok) {
-//         throw new Error(`HTTP error! Status: ${res.status}`);
-//     }
-//     var data = await res.text()
-//     console.log(data)
 
-// } catch
-// (error) {
-//     console.error('Error during fetch:', error.message);
-
-// }
 const email = 'toto@gmail.com'; // Adresse e-mail à envoyer dans la requête
 
 // URL de l'API avec le paramètre email dans l'URL
-const url = `http://lambo.lft:5163/api/v1.0/AccessToken/Login/?email=${encodeURIComponent(email)}`;
+var base_url=config.baseUrl + accessToken.getAccessToken(email)
 
 // Options de la requête
 const options = {
@@ -32,7 +17,7 @@ const options = {
 };
 
 // Envoi de la requête POST
-fetch(url, options)
+fetch(base_url, options)
   .then(response => {
     if (!response.ok) {
       throw new Error('HTTP error! Status: ' + response.status);
