@@ -20,7 +20,7 @@ function authentification() {
     var role = document.getElementById('role').value;
     var messageElement = document.getElementById('message');
 
-    if (login === "" || password === "") {
+    if (login === "" || password === "") { 
         return false;
     }
     for (var i = 0; i < users.length; i++) {
@@ -48,6 +48,7 @@ function authentification() {
             messageElement.textContent = "Cette utilisateur est valide mais ne dispose pas du bon role !!";
             setTimeout(function () {
                 messageElement.textContent = "";
+                window.location.href = '../Menu.html';
             }, 10000);
             return false;
         }

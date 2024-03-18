@@ -19,7 +19,7 @@ Composants et tâches clées du projet :
 
 4- Serveurs :
 
-    a) Utilisation de Nginx en tant que serveur web pour servir l'application.
+    a) Utilisation de Apache en tant que serveur web pour servir l'application.
     b) Utilisation de Redis en tant que système de mise en cache.
     c) Utilisation de MySQL comme base de données pour stocker les données de l'application.
 
