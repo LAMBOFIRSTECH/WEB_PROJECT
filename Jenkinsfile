@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent  { label 'Slave-windows-srv-prod' }
 
     stages {
         stage('Checkout') {
